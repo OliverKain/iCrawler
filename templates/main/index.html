@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $("form").submit(function(e){
+            var form = $(this);
+            return false;
+        });
+    </script>
+    <form action="api/crawl/" method="post">
+        <div>
+          <input name="url" id="url" value="http://www.cophieu68.vn/stockonline_node.php">
+        </div>
+        <div>
+          <button id="btnSeach">Find stock info </button>
+        </div>
+    </form>
+    <div id="result">Result Here</div>
+</body>
+</html>
